@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tag, Sparkles, MessageSquare, Maximize2, X, ChevronLeft, ChevronRight, Phone, Compass, Check } from 'lucide-react';
+import { Tag, Sparkles, MessageSquare, Maximize2, X, ChevronLeft, ChevronRight, Phone, Car, Compass, Check } from 'lucide-react';
 import { PROMOTIONAL_POSTERS, PromoPoster, BUSINESS_INFO } from '../data/services';
 
 interface PromotionsSectionProps {
@@ -35,16 +35,16 @@ export const PromotionsSection: React.FC<PromotionsSectionProps> = ({ onBookOffe
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandYellow/15 border border-brandYellow/30 text-brandYellow text-xs font-black tracking-widest uppercase mb-4 shadow-glow-yellow/30">
-            <Tag className="w-3.5 h-3.5" />
-            <span>Official B&amp;D Promotional Specials</span>
+            <Car className="w-3.5 h-3.5" />
+            <span>Official Rental Offers &amp; Tour Specials</span>
           </div>
 
           <h2 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight mb-4">
-            EXCLUSIVE OFFERS &amp; <span className="text-brandYellow">TRAVEL EXPERIENCES</span>
+            CAR RENTAL OFFERS &amp; <span className="text-brandYellow">TRAVEL PACKAGES</span>
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-            Browse our latest official promotional packages — from holiday festive discounts to complete North East travel expeditions across Assam, Meghalaya, and Arunachal.
+            Browse our official travel packages and festive car rental discounts — featuring highway cruisers like Toyota Innova Crysta, Maruti XL6, Ertiga, and Jimny 4x4 for expeditions across Assam, Meghalaya, and Arunachal.
           </p>
         </div>
 
@@ -127,15 +127,15 @@ export const PromotionsSection: React.FC<PromotionsSectionProps> = ({ onBookOffe
                 <div className="space-y-2.5 mb-8 p-4 rounded-xl bg-navy-950/70 border border-white/10">
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-200">
                     <Check className="w-4 h-4 text-brandYellow flex-shrink-0" />
-                    <span>Self-Drive &amp; Experienced Driver Options</span>
+                    <span>Self-Drive &amp; Chauffeur-Driven Options</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-200">
                     <Check className="w-4 h-4 text-brandYellow flex-shrink-0" />
-                    <span>Road Side Assistance across North East routes</span>
+                    <span>Standard 24h / 320 KM rental allowance</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-200">
                     <Check className="w-4 h-4 text-brandYellow flex-shrink-0" />
-                    <span>Instant WhatsApp enquiry confirmation</span>
+                    <span>24/7 Road Side Assistance on North East routes</span>
                   </div>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export const PromotionsSection: React.FC<PromotionsSectionProps> = ({ onBookOffe
                   className="w-full sm:flex-1 py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Enquire on WhatsApp</span>
+                  <span>Book This Car Offer</span>
                 </button>
 
                 <a
@@ -194,7 +194,7 @@ export const PromotionsSection: React.FC<PromotionsSectionProps> = ({ onBookOffe
         </div>
       </div>
 
-      {/* Lightbox Modal for Full Resolution Poster View */}
+      {/* Lightbox Modal */}
       {selectedPoster && (
         <div
           className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in"
@@ -235,7 +235,7 @@ export const PromotionsSection: React.FC<PromotionsSectionProps> = ({ onBookOffe
             {/* Modal Footer Actions */}
             <div className="p-4 sm:p-5 bg-navy-900 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
               <p className="text-xs text-slate-300 text-center sm:text-left">
-                Contact B&amp;D Car Rental Agency directly to book this exclusive offer or enquire about dates.
+                Contact B&amp;D Car Rental Agency to book this car rental package or verify travel dates.
               </p>
 
               <div className="flex items-center gap-3 w-full sm:w-auto">

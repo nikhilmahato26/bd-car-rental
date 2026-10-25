@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MessageSquare, Tag, CheckCircle } from 'lucide-react';
+import { Calendar, MessageSquare, Tag, CheckCircle, ShieldCheck, Key, UserCheck } from 'lucide-react';
 import { Vehicle } from '../types';
 import { buildVehicleQuickWhatsAppUrl } from '../lib/whatsapp';
 
@@ -21,17 +21,35 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, onSelectVehic
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-60" />
 
-        {/* Category Badge */}
-        <div className="absolute top-3 left-3 flex items-center gap-1.5">
-          <span className="px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wider uppercase bg-navy-950/80 backdrop-blur-md text-brandYellow border border-brandYellow/40">
+        {/* Category & Custom Badge */}
+        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 max-w-[80%]">
+          <span className="px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wider uppercase bg-navy-950/85 backdrop-blur-md text-brandYellow border border-brandYellow/40">
             {vehicle.category}
           </span>
+          {vehicle.badge && (
+            <span className="px-2 py-1 rounded-md text-[10px] font-bold tracking-wider uppercase bg-brandRed/85 backdrop-blur-md text-white border border-red-500/40">
+              {vehicle.badge}
+            </span>
+          )}
         </div>
 
         {/* Availability Status */}
-        <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wider bg-navy-950/80 backdrop-blur-md text-emerald-400 border border-emerald-500/30">
+        <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wider bg-navy-950/85 backdrop-blur-md text-emerald-400 border border-emerald-500/30">
           <CheckCircle className="w-3 h-3" />
-          <span>Check Availability</span>
+          <span>Available</span>
+        </div>
+
+        {/* Bottom image overlay chip */}
+        <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-[11px] font-semibold text-slate-300 bg-navy-950/80 px-2.5 py-1 rounded-md backdrop-blur-sm border border-white/10">
+          <span className="flex items-center gap-1">
+            <Key className="w-3 h-3 text-brandYellow" /> Self-Drive
+          </span>
+          <span className="text-slate-500">•</span>
+          <span className="flex items-center gap-1">
+            <UserCheck className="w-3 h-3 text-blue-400" /> With Driver
+          </span>
+          <span className="text-slate-500">•</span>
+          <span>320 KM / 24h</span>
         </div>
       </div>
 
@@ -51,7 +69,7 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, onSelectVehic
           <div className="p-3 rounded-xl bg-navy-950/90 border border-white/10 mb-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Tag className="w-4 h-4 text-brandYellow" />
-              <span className="text-xs text-slate-300">Daily Rental:</span>
+              <span className="text-xs text-slate-300">Rental Tariff:</span>
             </div>
             <span className="text-xs font-bold uppercase tracking-wider text-brandYellow font-heading">
               Contact for Price
@@ -65,7 +83,7 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, onSelectVehic
               className="flex-1 py-3 px-4 rounded-xl bg-brandRed hover:bg-brandRed-light text-white font-heading font-bold text-xs uppercase tracking-wider shadow-glow-red transition-all duration-200 flex items-center justify-center gap-1.5 border border-red-500/40"
             >
               <Calendar className="w-4 h-4" />
-              <span>Book This Vehicle</span>
+              <span>Book This Car</span>
             </button>
 
             <a

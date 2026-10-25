@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Calendar, Sparkles, Tag } from 'lucide-react';
+import { Menu, X, Phone, Calendar, Sparkles, Car } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/services';
 
 interface NavbarProps {
@@ -20,10 +20,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
   const navLinks = [
     { name: 'Home', href: '#hero' },
-    { name: 'Special Offers', href: '#promotions', isSpecial: true },
+    { name: 'Car Fleet', href: '#fleet' },
     { name: 'Services', href: '#services' },
-    { name: 'Our Fleet', href: '#fleet' },
-    { name: 'Car & Bike Wash', href: '#car-washing' },
+    { name: 'Special Offers', href: '#promotions', isSpecial: true },
+    { name: 'Doorstep Washing', href: '#car-washing' },
     { name: 'About Us', href: '#about' },
     { name: 'Contact & Map', href: '#contact' },
   ];
@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo */}
+          {/* Brand Logo - Car Rental Primary */}
           <a
             href="#hero"
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brandYellow rounded-lg p-1"
@@ -79,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 </span>
               </div>
               <span className="text-[10px] tracking-widest text-slate-300 uppercase font-semibold font-heading -mt-1">
-                Car Rental + Mobile Wash
+                Car Rental Agency
               </span>
             </div>
           </a>
@@ -120,8 +120,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               onClick={handleBookClick}
               className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brandRed hover:bg-brandRed-light text-white text-xs sm:text-sm font-bold tracking-wide shadow-glow-red transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] border border-red-500/40"
             >
-              <Calendar className="w-4 h-4" />
-              <span>Book a Slot</span>
+              <Car className="w-4 h-4" />
+              <span>Book a Car</span>
             </button>
           </div>
 
@@ -131,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               onClick={handleBookClick}
               className="sm:hidden px-3 py-1.5 rounded-md bg-brandRed text-white text-xs font-bold tracking-wide shadow-sm"
             >
-              Book
+              Book Car
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -181,8 +181,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               onClick={handleBookClick}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-brandRed text-white text-sm font-bold shadow-glow-red"
             >
-              <Calendar className="w-4 h-4" />
-              <span>Book Car / Bike Service</span>
+              <Car className="w-4 h-4" />
+              <span>Book a Rental Car</span>
             </button>
           </div>
         </div>

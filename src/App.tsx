@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { BookingForm } from './components/BookingForm';
+import { FleetSection } from './sections/FleetSection';
 import { PromotionsSection } from './sections/PromotionsSection';
 import { ServicesSection } from './sections/ServicesSection';
-import { FleetSection } from './sections/FleetSection';
 import { RentalInformation } from './sections/RentalInformation';
 import { CarWashingSection } from './sections/CarWashingSection';
 import { WhyChooseSection } from './sections/WhyChooseSection';
@@ -69,43 +69,43 @@ export function App() {
       <Navbar onOpenBooking={scrollToBooking} />
 
       <main className="flex-1">
-        {/* Hero Section */}
+        {/* Hero Section - 100% Car Rental Spotlight */}
         <Hero
           onExploreFleet={handleExploreFleet}
           onOpenBooking={scrollToBooking}
         />
 
-        {/* Quick Booking Enquiry Panel with 3 Tabs */}
+        {/* Quick Booking Enquiry Panel (Car Rental Default & Primary) */}
         <BookingForm
           selectedVehicle={selectedVehicle}
           initialTab={formInitialTab}
         />
 
-        {/* Top Promotional Offers & Festive Highlights Section */}
-        <PromotionsSection onBookOffer={scrollToBooking} />
-
-        {/* Core Services Section */}
-        <ServicesSection onSelectService={handleSelectService} />
-
-        {/* Fleet Section with 11 Vehicles */}
+        {/* Verified Fleet Grid - Elevated for Instant Car Browsing */}
         <FleetSection onSelectVehicle={handleSelectVehicle} />
 
-        {/* Confirmed Rental Information Guidelines */}
+        {/* Car Rental Promotional Offers & Festive Expeditions */}
+        <PromotionsSection onBookOffer={scrollToBooking} />
+
+        {/* Core Car Rental Services: Self-Drive, Chauffeur & Road Trips */}
+        <ServicesSection onSelectService={handleSelectService} />
+
+        {/* Confirmed Rental Guidelines: 24h Duration & 320 KM Limit */}
         <RentalInformation onContactClick={handleContactClick} />
-
-        {/* Dedicated Doorstep Car & Bike Washing Packages Section */}
-        <CarWashingSection onSelectPackage={handleSelectPackage} />
-
-        {/* Why Choose B&D Agency */}
-        <WhyChooseSection />
-
-        {/* 4-Step Booking Process Timeline from Poster */}
-        <HowBookingWorks />
 
         {/* Grounded About Us Partner Section */}
         <AboutSection onContactClick={handleContactClick} />
 
-        {/* Contact Section with Interactive Google Map & GPS Directions */}
+        {/* Doorstep Car & Bike Washing (Convenience Add-on Section) */}
+        <CarWashingSection onSelectPackage={handleSelectPackage} />
+
+        {/* Why Choose B&D Car Rental Agency */}
+        <WhyChooseSection />
+
+        {/* 4-Step Booking Timeline Process */}
+        <HowBookingWorks />
+
+        {/* Contact Section with Interactive Google Map & Directions */}
         <ContactSection />
       </main>
 

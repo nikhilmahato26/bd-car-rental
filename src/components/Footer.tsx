@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, MessageSquare, ArrowUp, Sparkles, Bike, Car } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare, ArrowUp, Car, Key, ShieldCheck } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/services';
 
 export const Footer: React.FC = () => {
@@ -11,36 +11,37 @@ export const Footer: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '#hero' },
-    { name: 'Services', href: '#services' },
-    { name: 'Our Fleet', href: '#fleet' },
-    { name: 'Car & Bike Wash', href: '#car-washing' },
+    { name: 'Our Car Fleet', href: '#fleet' },
+    { name: 'Rental Services', href: '#services' },
+    { name: 'Special Offers', href: '#promotions' },
+    { name: 'Doorstep Washing', href: '#car-washing' },
     { name: 'About Us', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact & Map', href: '#contact' },
   ];
 
   return (
     <footer className="bg-navy-950 border-t border-brandYellow/30 pt-16 pb-28 sm:pb-16 text-slate-300 relative">
-      {/* Top Trust Ribbon from Poster */}
+      {/* Top Trust Ribbon */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="p-4 rounded-2xl bg-navy-900 border border-brandYellow/40 flex flex-wrap items-center justify-around gap-4 text-center">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-brandYellow" />
             <span className="font-heading font-black text-xs sm:text-sm text-white uppercase tracking-wider">
-              CLEANER VEHICLES
+              WELL-MAINTAINED FLEET
             </span>
           </div>
           <span className="hidden sm:inline text-slate-600">|</span>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-brandYellow" />
             <span className="font-heading font-black text-xs sm:text-sm text-white uppercase tracking-wider">
-              HAPPIER JOURNEYS
+              24/7 ROADSIDE ASSISTANCE
             </span>
           </div>
           <span className="hidden sm:inline text-slate-600">|</span>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-brandYellow" />
             <span className="font-heading font-black text-xs sm:text-sm text-white uppercase tracking-wider">
-              TRUSTED SERVICE
+              AFFORDABLE RENTAL RATES
             </span>
           </div>
         </div>
@@ -59,13 +60,13 @@ export const Footer: React.FC = () => {
                   B<span className="text-brandYellow">&amp;</span>D
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-widest text-slate-400 font-heading block -mt-1">
-                  Mobile Wash &amp; Car Rental
+                  Car Rental Agency
                 </span>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-              One Agency — Multiple Services. Car rentals (Self-Drive &amp; With Driver) plus doorstep car &amp; bike washing across North Lakhimpur.
+              North Lakhimpur&apos;s trusted car rental partner. Offering self-drive and chauffeur-driven car rentals for local travel and outstation tours across Assam and the North East.
             </p>
 
             <div className="pt-2">
@@ -78,7 +79,7 @@ export const Footer: React.FC = () => {
           {/* Col 2: Quick Links */}
           <div>
             <h4 className="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4 border-b border-brandYellow/30 pb-2 inline-block">
-              Quick Links
+              Quick Navigation
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {navLinks.map((link) => (
@@ -95,34 +96,40 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Services & Packages */}
+          {/* Col 3: Car Rental Fleet & Services */}
           <div>
             <h4 className="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4 border-b border-brandYellow/30 pb-2 inline-block">
-              Our Services
+              Rental Categories
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
-                <a href="#services" className="hover:text-brandYellow transition-colors flex items-center gap-1.5">
+                <a href="#fleet" className="hover:text-brandYellow transition-colors flex items-center gap-1.5">
                   <span className="text-brandYellow text-xs">›</span>
-                  <span>Self-Drive &amp; With Driver Car Rentals</span>
-                </a>
-              </li>
-              <li>
-                <a href="#car-washing" className="hover:text-brandYellow transition-colors flex items-center gap-1.5">
-                  <span className="text-brandYellow text-xs">›</span>
-                  <span>Car Wash (Basic ₹399 / Prem ₹699 / Del ₹999)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#car-washing" className="hover:text-brandYellow transition-colors flex items-center gap-1.5">
-                  <span className="text-brandYellow text-xs">›</span>
-                  <span>Bike Wash (Basic ₹199 / Prem ₹399 / Del ₹599)</span>
+                  <span>Toyota Innova Crysta (Luxury MPV)</span>
                 </a>
               </li>
               <li>
                 <a href="#fleet" className="hover:text-brandYellow transition-colors flex items-center gap-1.5">
                   <span className="text-brandYellow text-xs">›</span>
-                  <span>Verified 11-Vehicle Fleet (Maruti, Tata, Mahindra)</span>
+                  <span>Maruti Ertiga &amp; XL6 (Family 7-Seater)</span>
+                </a>
+              </li>
+              <li>
+                <a href="#fleet" className="hover:text-brandYellow transition-colors flex items-center gap-1.5">
+                  <span className="text-brandYellow text-xs">›</span>
+                  <span>Maruti Jimny &amp; Bolero (SUVs &amp; 4x4)</span>
+                </a>
+              </li>
+              <li>
+                <a href="#fleet" className="hover:text-brandYellow transition-colors flex items-center gap-1.5">
+                  <span className="text-brandYellow text-xs">›</span>
+                  <span>Swift, Baleno, Alto K10 (Hatchbacks)</span>
+                </a>
+              </li>
+              <li>
+                <a href="#car-washing" className="hover:text-brandYellow transition-colors flex items-center gap-1.5 text-slate-400">
+                  <span className="text-brandYellow text-xs">›</span>
+                  <span>Doorstep Car &amp; Bike Washing</span>
                 </a>
               </li>
             </ul>
@@ -131,7 +138,7 @@ export const Footer: React.FC = () => {
           {/* Col 4: Contact Info */}
           <div>
             <h4 className="font-heading font-bold text-sm text-white uppercase tracking-wider mb-4 border-b border-brandYellow/30 pb-2 inline-block">
-              Contact Details
+              Contact Desk
             </h4>
             <ul className="space-y-3 text-xs sm:text-sm">
               <li className="flex items-start gap-2.5">
@@ -140,7 +147,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brandYellow flex-shrink-0" />
-                <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="text-white hover:text-brandYellow">
+                <a href={`tel:${BUSINESS_INFO.phoneRaw}`} className="text-white hover:text-brandYellow font-semibold">
                   {BUSINESS_INFO.phone}
                 </a>
               </li>
@@ -158,7 +165,7 @@ export const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-white hover:text-emerald-400 font-semibold"
                 >
-                  WhatsApp Booking Support
+                  WhatsApp Booking Desk
                 </a>
               </li>
             </ul>
