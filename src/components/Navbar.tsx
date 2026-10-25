@@ -20,9 +20,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
   const navLinks = [
     { name: 'Home', href: '#hero' },
-    { name: 'Car Rentals', href: '#services' },
+    { name: 'Services', href: '#services' },
     { name: 'Our Fleet', href: '#fleet' },
-    { name: 'Car Washing', href: '#car-washing' },
+    { name: 'Car & Bike Wash', href: '#car-washing' },
     { name: 'About Us', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 </span>
               </div>
               <span className="text-[10px] tracking-widest text-slate-300 uppercase font-semibold font-heading -mt-1">
-                Car Rental Agency
+                Car Rental + Mobile Wash
               </span>
             </div>
           </a>
@@ -115,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brandRed hover:bg-brandRed-light text-white text-xs sm:text-sm font-bold tracking-wide shadow-glow-red transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] border border-red-500/40"
             >
               <Calendar className="w-4 h-4" />
-              <span>Book a Car</span>
+              <span>Book a Slot</span>
             </button>
           </div>
 
@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-brandRed text-white text-sm font-bold shadow-glow-red"
             >
               <Calendar className="w-4 h-4" />
-              <span>Request Booking Enquiry</span>
+              <span>Book Car / Bike Service</span>
             </button>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { z } from 'zod';
 
-// Indian phone number regex: allows optional +91 or 0, followed by 10 digits
 const indianPhoneRegex = /^(?:\+91|0)?[6-9]\d{9}$/;
 
 export const bookingFormSchema = z.object({
@@ -51,12 +50,18 @@ export const washingFormSchema = z.object({
     .regex(indianPhoneRegex, {
       message: 'Please enter a valid 10-digit phone number',
     }),
+  vehicleType: z.enum(['car', 'bike'], {
+    required_error: 'Please select car or bike',
+  }),
+  selectedPackage: z
+    .string()
+    .min(1, { message: 'Please select a washing package' }),
   vehicleModel: z
     .string()
-    .min(2, { message: 'Please enter your car model (e.g. Swift, Creta, Alto)' }),
+    .min(2, { message: 'Please enter your vehicle model (e.g. Swift, Creta, Pulsar, Royal Enfield)' }),
   preferredDate: z
     .string()
-    .min(1, { message: 'Please select a date for the car wash' }),
+    .min(1, { message: 'Please select a date for the doorstep wash' }),
   location: z
     .string()
     .min(3, { message: 'Please enter your address/locality in North Lakhimpur' }),

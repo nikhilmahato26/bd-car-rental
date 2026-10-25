@@ -17,7 +17,7 @@ import { ServiceItem } from './types';
 
 export function App() {
   const [selectedVehicle, setSelectedVehicle] = useState<string | undefined>(undefined);
-  const [formInitialTab, setFormInitialTab] = useState<'rental' | 'washing'>('rental');
+  const [formInitialTab, setFormInitialTab] = useState<'rental' | 'car-washing' | 'bike-washing'>('rental');
 
   const scrollToBooking = () => {
     const el = document.getElementById('booking');
@@ -40,16 +40,18 @@ export function App() {
   };
 
   const handleSelectService = (service: ServiceItem) => {
-    if (service.ctaType === 'washing') {
-      setFormInitialTab('washing');
+    if (service.ctaType === 'car-washing') {
+      setFormInitialTab('car-washing');
+    } else if (service.ctaType === 'bike-washing') {
+      setFormInitialTab('bike-washing');
     } else {
       setFormInitialTab('rental');
     }
     scrollToBooking();
   };
 
-  const handleBookWashing = () => {
-    setFormInitialTab('washing');
+  const handleSelectPackage = (type: 'car-washing' | 'bike-washing') => {
+    setFormInitialTab(type);
     scrollToBooking();
   };
 
@@ -72,7 +74,7 @@ export function App() {
           onOpenBooking={scrollToBooking}
         />
 
-        {/* Quick Booking Enquiry Panel */}
+        {/* Quick Booking Enquiry Panel with 3 Tabs */}
         <BookingForm
           selectedVehicle={selectedVehicle}
           initialTab={formInitialTab}
@@ -81,19 +83,19 @@ export function App() {
         {/* Core Services Section */}
         <ServicesSection onSelectService={handleSelectService} />
 
-        {/* Fleet Section */}
+        {/* Fleet Section with 11 Vehicles */}
         <FleetSection onSelectVehicle={handleSelectVehicle} />
 
         {/* Confirmed Rental Information Guidelines */}
         <RentalInformation onContactClick={handleContactClick} />
 
-        {/* Doorstep Car Washing Showcase */}
-        <CarWashingSection onBookWashing={handleBookWashing} />
+        {/* Dedicated Doorstep Car & Bike Washing Packages Section */}
+        <CarWashingSection onSelectPackage={handleSelectPackage} />
 
         {/* Why Choose B&D Agency */}
         <WhyChooseSection />
 
-        {/* 4-Step Booking Process Timeline */}
+        {/* 4-Step Booking Process Timeline from Poster */}
         <HowBookingWorks />
 
         {/* Grounded About Us Partner Section */}

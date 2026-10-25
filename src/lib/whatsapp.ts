@@ -1,5 +1,4 @@
 import { BookingFormData, WashingFormData } from '../types';
-import { BUSINESS_INFO } from '../data/services';
 
 const WHATSAPP_PHONE = '919395677586';
 
@@ -22,6 +21,7 @@ export function buildRentalWhatsAppUrl(data: BookingFormData): string {
       : null,
     `----------------------------------------`,
     `⏱️ *Standard Terms:* 24 Hours / 320 KM Limit`,
+    `🛠️ *Feature:* Road Side Assistance & Well Maintained Fleet`,
     `ℹ️ _Sent from B&D Car Rental Agency Website_`,
   ]
     .filter(Boolean)
@@ -31,21 +31,28 @@ export function buildRentalWhatsAppUrl(data: BookingFormData): string {
 }
 
 /**
- * Creates encoded WhatsApp URL for doorstep car washing enquiry
+ * Creates encoded WhatsApp URL for doorstep car & bike washing enquiry
  */
 export function buildWashingWhatsAppUrl(data: WashingFormData): string {
+  const isBike = data.vehicleType === 'bike';
+  const header = isBike 
+    ? `*NEW BIKE WASHING ENQUIRY - B&D MOBILE WASHING*`
+    : `*NEW CAR WASHING ENQUIRY - B&D MOBILE WASHING*`;
+
   const message = [
-    `*NEW CAR WASHING ENQUIRY - B&D CAR RENTAL AGENCY*`,
+    header,
     `----------------------------------------`,
     `👤 *Customer Name:* ${data.customerName.trim()}`,
     `📞 *Phone Number:* ${data.phoneNumber.trim()}`,
+    `🛵 *Vehicle Type:* ${isBike ? 'Two-Wheeler / Bike' : 'Four-Wheeler / Car'}`,
+    `✨ *Selected Package:* ${data.selectedPackage}`,
     `🚘 *Vehicle Model:* ${data.vehicleModel.trim()}`,
-    `📅 *Preferred Date:* ${data.preferredDate}`,
-    `📍 *Service Location:* ${data.location.trim()}`,
-    data.notes?.trim() ? `📝 *Notes / Requests:* ${data.notes.trim()}` : null,
+    `📅 *Preferred Slot Date:* ${data.preferredDate}`,
+    `📍 *Doorstep Location:* ${data.location.trim()}`,
+    data.notes?.trim() ? `📝 *Notes:* ${data.notes.trim()}` : null,
     `----------------------------------------`,
-    `✨ *Service:* Doorstep Car Washing & Cleaning`,
-    `ℹ️ _Sent from B&D Car Rental Agency Website_`,
+    `🎯 *Promise:* We Come to You. You Relax. Your Vehicle Shines!`,
+    `ℹ️ _Sent from B&D Mobile Washing Website_`,
   ]
     .filter(Boolean)
     .join('\n');
@@ -66,7 +73,7 @@ export function buildVehicleQuickWhatsAppUrl(vehicleName: string): string {
  */
 export function buildGeneralWhatsAppUrl(servicePrompt?: string): string {
   const text = servicePrompt 
-    ? `Hello B&D Car Rental Agency, I would like to enquire about ${servicePrompt}. Please share pricing and availability.`
-    : `Hello B&D Car Rental Agency, I would like to enquire about your car rental and car washing services in North Lakhimpur.`;
+    ? `Hello B&D Car Rental Agency, I would like to enquire about ${servicePrompt}. Please share pricing and available slots.`
+    : `Hello B&D Car Rental Agency, I would like to enquire about your car rental, car washing, and bike washing services in North Lakhimpur.`;
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`;
 }

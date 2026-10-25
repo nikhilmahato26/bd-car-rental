@@ -7,7 +7,7 @@ export const VEHICLES: Vehicle[] = [
     category: 'Hatchbacks',
     description: 'A compact and efficient hatchback ideal for easy city travel and narrow roads in and around North Lakhimpur.',
     image: '/fleet/alto-k10.jpg',
-    badge: 'Hatchback',
+    badge: 'City Compact',
   },
   {
     id: 'ignis',
@@ -42,6 +42,14 @@ export const VEHICLES: Vehicle[] = [
     badge: 'Family Travel',
   },
   {
+    id: 'xl6',
+    name: 'Maruti Suzuki XL6',
+    category: 'Family Cars',
+    description: 'A premium 6-seater MPV with plush captain seats and executive comfort for long distance family journeys.',
+    image: '/fleet/xl6.jpg',
+    badge: 'Premium 6-Seater',
+  },
+  {
     id: 'fronx',
     name: 'Maruti Suzuki Fronx',
     category: 'SUVs',
@@ -64,6 +72,14 @@ export const VEHICLES: Vehicle[] = [
     description: 'A sturdy and dependable SUV known for rugged dependability across diverse road surfaces and local travel.',
     image: '/fleet/bolero-b6.jpg',
     badge: 'Rugged Utility',
+  },
+  {
+    id: 'jimny',
+    name: 'Maruti Suzuki Jimny',
+    category: 'SUVs',
+    description: 'An iconic 4x4 off-roader with high ground clearance and ladder-frame chassis, ready for any Assam terrain.',
+    image: '/fleet/jimny.jpg',
+    badge: '4x4 Off-Roader',
   },
   {
     id: 'xuv-3xo',

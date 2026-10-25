@@ -20,9 +20,22 @@ export interface BookingFormData {
   additionalRequirements?: string;
 }
 
+export interface WashingPackage {
+  id: string;
+  name: 'Basic Wash' | 'Premium Wash' | 'Deluxe Wash';
+  vehicleType: 'car' | 'bike';
+  price: string;
+  priceNumber: number;
+  includes: string;
+  features: string[];
+  popular?: boolean;
+}
+
 export interface WashingFormData {
   customerName: string;
   phoneNumber: string;
+  vehicleType: 'car' | 'bike';
+  selectedPackage: string;
   vehicleModel: string;
   preferredDate: string;
   location: string;
@@ -36,6 +49,6 @@ export interface ServiceItem {
   description: string;
   highlights: string[];
   ctaText: string;
-  ctaType: 'rental' | 'washing';
+  ctaType: 'rental' | 'car-washing' | 'bike-washing';
   icon: string;
 }
