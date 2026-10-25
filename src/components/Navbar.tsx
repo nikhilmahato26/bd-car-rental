@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Calendar, Sparkles } from 'lucide-react';
+import { Menu, X, Phone, Calendar, Sparkles, Tag } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/services';
 
 interface NavbarProps {
@@ -20,11 +20,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
   const navLinks = [
     { name: 'Home', href: '#hero' },
+    { name: 'Special Offers', href: '#promotions', isSpecial: true },
     { name: 'Services', href: '#services' },
     { name: 'Our Fleet', href: '#fleet' },
     { name: 'Car & Bike Wash', href: '#car-washing' },
     { name: 'About Us', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact & Map', href: '#contact' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -90,10 +91,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-3.5 py-2 text-sm font-medium text-slate-200 hover:text-brandYellow transition-colors rounded-md hover:bg-white/5 relative group"
+                className={`px-3 py-2 text-xs xl:text-sm font-medium transition-colors rounded-md relative group flex items-center gap-1.5 ${
+                  link.isSpecial
+                    ? 'text-brandYellow font-bold hover:text-white bg-brandYellow/10 border border-brandYellow/30'
+                    : 'text-slate-200 hover:text-brandYellow hover:bg-white/5'
+                }`}
               >
-                {link.name}
-                <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-brandYellow scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
+                {link.isSpecial && <Sparkles className="w-3.5 h-3.5 text-brandYellow animate-spin duration-3000" />}
+                <span>{link.name}</span>
+                <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-brandYellow scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
               </a>
             ))}
           </nav>
@@ -148,9 +154,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:text-brandYellow hover:bg-white/5 transition-colors flex items-center justify-between"
+                className={`px-4 py-3 rounded-lg text-base font-medium transition-colors flex items-center justify-between ${
+                  link.isSpecial
+                    ? 'bg-brandYellow/10 text-brandYellow font-bold border border-brandYellow/30'
+                    : 'text-slate-200 hover:text-brandYellow hover:bg-white/5'
+                }`}
               >
-                <span>{link.name}</span>
+                <span className="flex items-center gap-2">
+                  {link.isSpecial && <Sparkles className="w-4 h-4 text-brandYellow" />}
+                  <span>{link.name}</span>
+                </span>
                 <span className="text-slate-500 text-xs">→</span>
               </a>
             ))}

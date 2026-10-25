@@ -8,6 +8,10 @@ export const BUSINESS_INFO = {
   email: 'aryanmartial786@gmail.com',
   address: 'Chapori Gaon, Ward No. 12, North Lakhimpur, Assam, India',
   serviceArea: 'North Lakhimpur, Assam',
+  coordinates: {
+    lat: 27.227036,
+    lng: 94.098259,
+  },
   rentalDuration: '24 Hours',
   drivingLimit: '320 KM per 24-Hour Rental',
   tagline: 'YOUR VEHICLE, OUR CARE!',
@@ -16,9 +20,68 @@ export const BUSINESS_INFO = {
   doorstepPitch: 'Why waste your valuable time cleaning your vehicles? We bring the wash right to your doorstep!',
   oneCallSlogan: 'One call is all it takes — We come to you!',
   trustRibbon: 'CLEANER VEHICLES | HAPPIER JOURNEYS | TRUSTED SERVICE',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Chapori+Gaon+Ward+No+12+North+Lakhimpur+Assam',
+  mapsUrl: 'https://maps.google.com/?q=27.227036,94.098259',
+  mapsEmbedUrl: 'https://maps.google.com/maps?q=27.227036,94.098259&hl=en&z=15&output=embed',
   whatsappUrl: 'https://wa.me/919395677586',
 };
+
+export interface PromoPoster {
+  id: string;
+  title: string;
+  tagline: string;
+  badge: string;
+  image: string;
+  description: string;
+  whatsappMessage: string;
+}
+
+export const PROMOTIONAL_POSTERS: PromoPoster[] = [
+  {
+    id: 'promo-travel-experience',
+    title: 'More Than Just A Ride',
+    tagline: "It's a Complete Travel Experience!",
+    badge: 'North East Expeditions',
+    image: '/promotions/promo-travel-experience.jpg',
+    description: 'Special travel packages for Meghalaya, Arunachal Pradesh, Tawang, Assam & across the North East. Well-maintained cars, roadside assistance & affordable rates.',
+    whatsappMessage: 'Hello B&D Car Rental Agency, I am interested in your "More Than Just A Ride - North East Travel Experience" package for trips to Meghalaya, Arunachal, or Tawang.',
+  },
+  {
+    id: 'promo-diwali-fleet',
+    title: 'Diwali Vacation Special',
+    tagline: 'Exclusive Offers for Family & Friends',
+    badge: 'Festive Special',
+    image: '/promotions/promo-diwali-fleet.jpg',
+    description: 'Make unforgettable holiday memories with self-drive and experienced driver options on premium SUVs and sedans for your festival travels.',
+    whatsappMessage: 'Hello B&D Car Rental Agency, I want to enquire about the Diwali Vacation Exclusive Offers for self-drive / driver rentals.',
+  },
+  {
+    id: 'promo-diwali-family',
+    title: 'Scenic Vacation Getaway',
+    tagline: 'Choose Your Ride • Explore Your Destination',
+    badge: 'Family & Friends',
+    image: '/promotions/promo-diwali-family.jpg',
+    description: 'Perfect vehicles for scenic vacations with loved ones. Well-maintained fleet, 24/7 roadside assistance, and hassle-free booking.',
+    whatsappMessage: 'Hello B&D Car Rental Agency, I would like to book a car for our family vacation trip with your festive offers.',
+  },
+  {
+    id: 'promo-diwali-special',
+    title: 'Holiday Memories Ride',
+    tagline: 'Book Your Ride Today!',
+    badge: 'Festival Offers',
+    image: '/promotions/promo-diwali-special.jpg',
+    description: 'Create unforgettable moments with our reliable vehicle fleet. Instant booking confirmation via direct phone call or WhatsApp.',
+    whatsappMessage: 'Hello B&D Car Rental Agency, I would like to enquire about booking a car under the Holiday Memories festive offer.',
+  },
+  {
+    id: 'promo-mobile-wash',
+    title: 'Doorstep Washing Specials',
+    tagline: 'We Come to You. You Relax. Your Vehicle Shines!',
+    badge: 'Car & Bike Wash',
+    image: '/promotions/promo-mobile-wash.jpg',
+    description: 'Doorstep foam wash, high pressure clean, interior vacuuming, and polish packages starting from ₹399 for cars and ₹199 for bikes in North Lakhimpur.',
+    whatsappMessage: 'Hello B&D Mobile Washing, I would like to book a doorstep car/bike washing slot.',
+  },
+];
 
 export const CAR_WASH_PACKAGES: WashingPackage[] = [
   {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { BookingForm } from './components/BookingForm';
+import { PromotionsSection } from './sections/PromotionsSection';
 import { ServicesSection } from './sections/ServicesSection';
 import { FleetSection } from './sections/FleetSection';
 import { RentalInformation } from './sections/RentalInformation';
@@ -80,6 +81,9 @@ export function App() {
           initialTab={formInitialTab}
         />
 
+        {/* Top Promotional Offers & Festive Highlights Section */}
+        <PromotionsSection onBookOffer={scrollToBooking} />
+
         {/* Core Services Section */}
         <ServicesSection onSelectService={handleSelectService} />
 
@@ -101,7 +105,7 @@ export function App() {
         {/* Grounded About Us Partner Section */}
         <AboutSection onContactClick={handleContactClick} />
 
-        {/* Contact Section with Directions & Phone */}
+        {/* Contact Section with Interactive Google Map & GPS Directions */}
         <ContactSection />
       </main>
 

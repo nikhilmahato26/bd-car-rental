@@ -16,13 +16,19 @@ Official modern, responsive web application for **B&D Mobile Car & Bike Washing 
 * **Standard Terms:** 24 Hours Rental Duration / 320 KM Driving Limit
 * **Features:** Well Maintained Cars, Road Side Assistance, Affordable Prices, Easy Booking
 
-### 2. 🧼 Doorstep Car Washing Packages
+### 2. 🪔 Special Offers & Festive Promotions (New Section)
+* **North East Expeditions:** "More Than Just A Ride — Complete Travel Experience!" (Meghalaya, Arunachal, Tawang, Assam)
+* **Diwali Vacation Specials:** Exclusive festival discounts for family & friends trips
+* **Scenic Holiday Getaways:** Full-fleet options for vacations across Assam & North East routes
+* **Interactive Lightbox:** Zoom-in view on all official promotional posters with one-click WhatsApp offer booking
+
+### 3. 🧼 Doorstep Car Washing Packages
 * **Basic Wash (₹399):** Exterior Wash + Tyre Clean
 * **Premium Wash (₹699):** Exterior + Interior + Tyre Clean + Dashboard Clean *(Most Popular)*
 * **Deluxe Wash (₹999):** Exterior + Interior + Engine Bay + Wax Polish
 * **Included Features:** Foam Wash, Pressure Wash, Tyre & Rim Cleaning, Interior Vacuuming, Dashboard & Glass Cleaning, Optional Wax Polish
 
-### 3. 🏍️ Doorstep Bike Washing Packages
+### 4. 🏍️ Doorstep Bike Washing Packages
 * **Basic Wash (₹199):** Exterior Wash + Tyre Clean
 * **Premium Wash (₹399):** Exterior + Interior + Chain Clean + Lubrication *(Most Popular)*
 * **Deluxe Wash (₹599):** Complete Clean + Polish
@@ -30,7 +36,7 @@ Official modern, responsive web application for **B&D Mobile Car & Bike Washing 
 
 ---
 
-## 🚙 Verified 11-Vehicle Fleet
+## 🚙 Verified Fleet
 
 1. **Maruti Suzuki Alto K10** (City Compact Hatchback)
 2. **Maruti Suzuki Ignis** (Urban Hatchback)
@@ -46,25 +52,14 @@ Official modern, responsive web application for **B&D Mobile Car & Bike Washing 
 
 ---
 
-## 🛠️ Technology Stack
+## 📍 Exact Location & Map
 
-- **Framework:** React 18 with Vite & TypeScript
-- **Styling:** Tailwind CSS with automotive navy, bright yellow/gold, and accent red tokens
-- **Icons:** Lucide React
-- **Validation:** Zod Schema Validation
-- **WhatsApp Integration:** Dynamic URL-encoded message generator for instant booking enquiry
-- **SEO:** Schema.org `AutoRental` & LocalBusiness JSON-LD, Open Graph, meta descriptions
-
----
-
-## 📞 Business Contact Details
-
-* **Name:** B&D Mobile Car & Bike Washing & Car Rental Agency
 * **Address:** Chapori Gaon, Ward No. 12, North Lakhimpur, Assam, India
+* **GPS Coordinates:** [27.227036, 94.098259](https://maps.google.com/?q=27.227036,94.098259)
+* **Google Maps Navigation:** [Open in Google Maps](https://maps.google.com/?q=27.227036,94.098259)
 * **Phone:** [+91 9395677586](tel:+919395677586)
 * **Email:** [aryanmartial786@gmail.com](mailto:aryanmartial786@gmail.com)
 * **WhatsApp Booking:** [Chat on WhatsApp](https://wa.me/919395677586)
-* **Slogan:** *"Cleaner Vehicles | Happier Journeys | Trusted Service"*
 
 ---
 
